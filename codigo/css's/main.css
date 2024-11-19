@@ -17,7 +17,7 @@ body {
 
 /* Barra superior */
 .top-bar {
-    background: linear-gradient(to right, #741eff, #0077ff);
+    background: linear-gradient(to right, #ab78fc, #590fe4);
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -29,11 +29,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(255, 255, 255);
+    background: rgba(66,21,78,255);
     padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
+
 }
 
 .main-nav .logo {
@@ -48,13 +49,13 @@ body {
 
 .nav-links li a {
     text-decoration: none;
-    color: #333;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .nav-links li a:hover {
-    color: #0255a7;
+    color: #9226f7;
 }
 
 /* Menu suspenso */
@@ -64,31 +65,37 @@ body {
     color: #000000;
     width: fit-content;
     height: fit-content;
-    display: none;
+
     list-style: none;
-    /*background-color: #ffffff5b;*/
 
     /* changes:*/
     z-index: 1000;
     position: absolute;
     align-self: center;
-    /*top: 190px; /* Ajuste aqui para a posição inicial do menu */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Ajuste para alinhar perfeitamente ao centro */
-    transition: all 1s ease-in-out; /* Suaviza a transição ao fixar no topo */
+    left: 45%; /* Centraliza horzontalmente */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px); /* Move o menu um pouco para cima inicialmente */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0s linear 0.5s; /* Suaviza a opacidade e a posição */
 }
  .menu.fixed{
     display: flex;
     position: fixed;
+    left: 45%;
     top: 0px; /* Ajuste o valor aqui conforme necessário */
-    transform: translate(-50%, 0); /* Remove a translação vertical */
+    
     border-radius: 0 0 20px 20px; /* Ajusta a borda para parecer encaixado no topo */
 
     width: auto; /* Ajusta para a largura total da página */
     padding: 10px 20px; /* Ajuste o padding ao ficar no topo */
 
-    background-color: #fffefe3f;
- } 
+    background-color: #fffefe6b;
+
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Retorna o menu para a posição normal */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Remove atraso de visibilidade */
+}
 
   .menu a {
     text-decoration: none;
@@ -224,36 +231,223 @@ body {
   }
   
 
-/* Seção com a imagem de fundo */
+/* Seção hero com vídeo de fundo */
 .hero {
-    position: relative;
-    background-image: url('../media/praca-ceub.jpg'); /* Substitua pelo caminho correto da sua imagem */
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* Altura ajustável */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
+  position: relative;
+  height: 100vh; /* Ajustável conforme necessário */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden; /* Garante que os elementos não saiam da área */
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  object-fit: cover; /* Garante que o vídeo preencha a área */
+  z-index: -2; /* Mantém o vídeo abaixo da camada de transparência */
+}
+
+/* Camada de transparência */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.466); /* Transparência preta */
+  z-index: -1; /* Coloca a camada acima do vídeo, mas atrás do texto */
 }
 
 .hero h1 {
-    color: white;
-    font-size: 4em;
+  color: white;
+    font-size: 3em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7), 
-                 -4px -4px 8px rgba(0, 0, 0, 0.7), 
-                 4px -4px 8px rgba(0, 0, 0, 0.7), 
-                 -4px 4px 8px rgba(0, 0, 0, 0.7);
-    z-index: 1; /* Garante que o texto fique acima do fundo */
+    text-align: left;
+    position: absolute;
+    bottom: 22%; /* Próximo da borda inferior */
+    z-index: 1; /* Mantém o texto acima das camadas */
+    margin: 0 auto;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.info-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.info-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
+}
+
+.info-text {
+  flex: 2;
+}
+
+.info-text h2 {
+  font-size: 2.5em;
+  color: rgba(66, 21, 78, 255);
+  margin-bottom: 15px;
+}
+
+.info-text p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* CUPOM GELEIA */
+.foodCard {
+  height: 220px;
+  width: 250px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  position: relative;
+  outline: 2px solid rgb(48, 48, 48);
+  user-select: none;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.Discount {
+  position: absolute;
+  left: 0;
+  font-size: 15px;
+  padding: 5px 10px 5px 10px;
+  font-weight: 600;
+  color: rgb(189, 189, 189);
+  background-color: rgb(46, 46, 46);
+  border-radius: 15px 0px 15px 0px;
+  width: auto;
+  height: auto;
+  font-style: italic;
+}
+
+.Like {
+  border: none;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  right: 0%;
+  font-size: 15px;
+  padding: 8px;
+  color: rgb(210, 210, 210);
+  background-color: rgb(48, 48, 48);
+  border-radius: 0px 20px 0px 15px;
+  width: 40px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.Like > svg {
+  transition: all 0.3s ease;
+}
+
+.Like:hover > svg {
+  fill: rgb(190, 0, 0);
+}
+
+.Like:focus {
+  outline: none;
+}
+
+.imageContainer {
+  padding: 5px;
+  height: 60%;
+  width: 100%;
+  padding-top: 35px;
+  border-radius: 15px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.imageContainer > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.foodTitle {
+  color: rgb(32, 32, 32);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  font-weight: 800;
+  padding-top: 5px;
+}
+
+.priceAndButton {
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.Price {
+  font-weight: 600;
+  padding-left: 5px;
+  color: rgb(0, 0, 0);
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.button {
+  padding: 0px 15px;
+  height: 25px;
+  border: none;
+  background-color: rgb(116, 219, 160);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.4s ease;
+  opacity: 100%;
+  font-size: 15px;
+}
+
+.button:hover {
+  box-shadow: rgb(116, 219, 160) 0px 0px 15px;
+}
+
+.button:active {
+  transform: scale(0.95);
 }
 
 
 /* Rodapé */
-footer {
-    background: #333;
+.contato {
+    background: rgba(66,21,78,255);
     color: #fff;
     text-align: center;
     padding: 20px;
