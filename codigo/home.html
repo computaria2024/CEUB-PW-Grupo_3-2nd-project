@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceubão - Praça de Alimentação</title>
+    <link rel="stylesheet" href="css's/main.css">
+</head>
+<body>
+    <!-- Barra Superior -->
+    <div class="top-bar">
+        No Ceubão você encontra tudo sobre os restaurantes do Ceub e ainda tem direito a descontos incríveis nas lojas, cadastre-se já.
+    </div>
+
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="main-nav">
+            <img src="media/logo-ceub.png" alt="Logo Ceubão" class="logo">
+            <ul class="nav-links">
+                <li><a href="#gastronomia">Gastronomia</a></li>
+                <li><a href="#avaliacao">Avaliação</a></li>
+                <li><a href="#cardapios">Cardápios</a></li>
+                <li><a href="#me-recomende">Me recomende</a></li>
+                <li><a href="#cupons">Cupons</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Menu Suspenso -->
+    <div class="menu">
+        <div class="item">
+          <a href="#" class="link">
+            <span> Serviços </span>
+            <svg viewBox="0 0 360 360" xml:space="preserve">
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  id="XMLID_225_"
+                  d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+                ></path>
+              </g>
+            </svg>
+          </a>
+          <div class="submenu">
+            <div class="submenu-item">
+              <a href="#" class="submenu-link"> Gastronomia </a>
+            </div>
+            <div class="submenu-item">
+              <a href="#" class="submenu-link"> Avaliação </a>
+            </div>
+            <div class="submenu-item">
+              <a href="#" class="submenu-link"> Cardápios </a>
+            </div>
+            <div class="submenu-item">
+              <a href="#" class="submenu-link"> Me recomende </a>
+            </div>
+            <div class="submenu-item">
+              <a href="#" class="submenu-link"> Cupons </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    <section class="hero">
+        <h1>Vem conhecer o que o Ceub tem de bom, calouro!</h1>
+    </section>
+    
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2024 Ceubão - Praça de Alimentação</p>
+        <p>Email: contato@ceubao.com.br | Telefone: (61) 1234-5678</p>
+        <p>Endereço: Centro Unificado de Brasília | 909 - 907 Asa Norte, Brasília, DF</p>
+    </footer>
+</body>
+<script>
+   //
+   window.addEventListener('scroll', function() {
+        const navCard = document.querySelector('.menu');
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > 10) { // Define quando o card deve fixar no topo
+            navCard.classList.add('fixed');
+        } else {
+            navCard.classList.remove('fixed');
+        }
+        });
+
+</script>
+</html>
