@@ -7,7 +7,7 @@
 }
 
 .image-container img {
-    width: 110%; /* Faz a imagem ser ligeiramente maior que o container */
+    width: 100%;
     height: auto; /* Mantém a proporção da imagem */
     object-fit: cover; /* Ajusta a imagem sem distorcer */
     position: absolute; /* Garante que a imagem possa ser centralizada */
@@ -20,6 +20,7 @@
     position: relative; /* Garante que os elementos dentro do container possam ser ajustados */
     overflow: visible; /* Permite que o conteúdo ultrapasse os limites do container */
     z-index: 1; /* Prioridade do container no empilhamento */
+    width: 90%;
 }
 
 .card-logo {
@@ -79,7 +80,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 50px;
-    padding: 0 20px;
+    padding: 0 30px;
 }
 
 .card {
