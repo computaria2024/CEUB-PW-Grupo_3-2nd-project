@@ -24,17 +24,14 @@
 
 .card-logo {
     position: absolute;
-    top: -20px; /* Move a logo mais para cima */
-    right: -20px; /* Move a logo mais para a direita */
-    width: 150px; /* Aumenta o tamanho da logo */
+    top: -65px; /* Move a logo mais para cima */
+    right: -45px; /* Move a logo mais para a direita */
+    width: 130px; /* Aumenta o tamanho da logo */
     height: auto; /* Mantém a proporção da logo */
     object-fit: contain; /* Evita distorções na imagem */
-    z-index: 10; /* Garante que a logo fique visível acima de outros elementos */
+    z-index: 999; /* Garante que a logo fique visível acima de outros elementos */
+    pointer-events: none; /* Evita interferência da logo em cliques ou interações com outros elementos */
 }
-
-
-
-
 
 .overlay-praca {
     position: absolute;
@@ -68,6 +65,7 @@
     padding: 0; /* Remove o padding adicional da seção */
     margin: 0;
     margin-top: 50px;
+    
 }
 
 .gastronomia-section h2 {
@@ -80,14 +78,15 @@
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 50px;
     padding: 0 20px;
 }
 
 .card {
     position: relative;
     border-radius: 8px;
-    overflow: hidden;
+    overflow: visible;
+    z-index: 2;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background: #fff;
     transition: transform 0.3s ease;
