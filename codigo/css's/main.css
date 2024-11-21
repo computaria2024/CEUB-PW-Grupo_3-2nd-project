@@ -63,6 +63,8 @@ body {
     color: #9226f7;
 }
 
+
+
 /* Menu suspenso */
 .menu {
     font-size: 16px;
@@ -247,6 +249,8 @@ body {
   text-align: center;
   color: white;
   overflow: hidden; /* Garante que os elementos não saiam da área */
+  z-index: 1; /* Mantém o vídeo atrás do menu */
+
 }
 
 .hero-video {
@@ -255,8 +259,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Garante que o vídeo preencha a área */
-  z-index: -2; /* Mantém o vídeo abaixo da camada de transparência */
+  object-fit: cover;
+  z-index: 0; /* Garante que o vídeo fique atrás de tudo */
 }
 
 /* Camada de transparência */
@@ -267,7 +271,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.267); /* Transparência preta */
-  z-index: -1; /* Coloca a camada acima do vídeo, mas atrás do texto */
+  z-index: 1; /* Coloca a camada acima do vídeo, mas atrás do texto */
 }
 
 .hero h1 {
