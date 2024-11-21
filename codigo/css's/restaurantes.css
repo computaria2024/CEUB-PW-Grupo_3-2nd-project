@@ -2,15 +2,39 @@
 .image-container {
     position: relative;
     width: 100%;
-    height: 90vh; /* Faz a imagem ocupar a altura total da tela */
+    height: 100vh; /* Faz a imagem ocupar a altura total da tela */
     overflow: hidden;
 }
 
 .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem seja ajustada proporcionalmente */
+    width: 110%; /* Faz a imagem ser ligeiramente maior que o container */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+    position: absolute; /* Garante que a imagem possa ser centralizada */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o ponto central */
 }
+
+.cards-container {
+    position: relative; /* Garante que os elementos dentro do container possam ser ajustados */
+    overflow: visible; /* Permite que o conteúdo ultrapasse os limites do container */
+    z-index: 1; /* Prioridade do container no empilhamento */
+}
+
+.card-logo {
+    position: absolute;
+    top: -20px; /* Move a logo mais para cima */
+    right: -20px; /* Move a logo mais para a direita */
+    width: 150px; /* Aumenta o tamanho da logo */
+    height: auto; /* Mantém a proporção da logo */
+    object-fit: contain; /* Evita distorções na imagem */
+    z-index: 10; /* Garante que a logo fique visível acima de outros elementos */
+}
+
+
+
+
 
 .overlay-praca {
     position: absolute;
@@ -76,24 +100,6 @@
 .card-image {
     width: 100%;
     height: 200px;
-    object-fit: cover;
-}
-
-.logo-container {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid #fff;
-    background: #fff;
-}
-
-.logo-container img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
