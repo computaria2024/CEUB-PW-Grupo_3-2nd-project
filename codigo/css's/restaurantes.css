@@ -113,7 +113,7 @@
     color: #333;
 }
 
-.overlay {
+.overlay-rest {
     position: absolute;
     top: 0;
     left: 0;
@@ -131,7 +131,7 @@
     padding: 15px;
 }
 
-.card:hover .overlay {
+.card:hover .overlay-rest {
     opacity: 1;
 }
 

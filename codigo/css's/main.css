@@ -266,12 +266,13 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.267); /* Transparência preta */
+  background-color: rgba(0, 0, 0, 0.486); /* Transparência preta */
   z-index: -1; /* Coloca a camada acima do vídeo, mas atrás do texto */
 }
 
 .hero h1 {
-    font-family: 'Bodoni MT', 'Bodoni 72', Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
+  padding: 0 50px;  
+  font-family: 'Bodoni MT', 'Bodoni 72', Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
     color: white;
     font-size: 5em;
     text-align: left;
@@ -291,6 +292,7 @@ body {
   background-color: rgb(217,215,215);
   background: radial-gradient(circle, rgba(217,215,215,1) 0%, rgba(242,242,242,1) 22%, rgba(255,255,255,1) 52%);
 
+  margin-bottom: 50px;
   margin-top: -40px; /* Ajuste do espaço entre a info e o vídeo */
   z-index: 0; /* Garante que não sobreponha outras seções */
 }
