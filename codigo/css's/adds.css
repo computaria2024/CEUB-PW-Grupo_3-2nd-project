@@ -5,7 +5,9 @@
     align-items: center;
     padding: 40px 30px; /* Espaçamento vertical */
     background-color: #f1f1f1; /* Fundo para separação visual */
-    background: linear-gradient(0deg, rgba(167, 167, 252, 0.61) 0%, rgba(242,242,242,0.53125) 68%, rgba(245,245,245,0.8645833333333334) 86%, rgba(255,255,255,0.7189250700280112) 100%);
+    background: linear-gradient(180deg, rgba(167, 167, 252, 0.61) 0%, rgba(242,242,242,0.53125) 68%, rgba(245,245,245,0.8645833333333334) 86%, rgba(255,255,255,0.7189250700280112) 100%);
+    margin-bottom: 130px;
+
   }
 
 .newsletter {
