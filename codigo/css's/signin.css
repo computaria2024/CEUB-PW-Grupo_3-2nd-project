@@ -8,15 +8,43 @@ html, body {
     height: 100%;
     width: 100%;
     overflow: hidden; /* Impede rolagem */
+    background: linear-gradient(270deg, rgba(171, 120, 252, 0.2), rgba(89, 15, 228, 0.2), rgba(221, 200, 255, 0.2));
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+}
+/* gradiente do plano de fundo */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Barra superior */
+.top-bar {
+  background: linear-gradient(to right, #ab78fc, #590fe4);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4); /* Adiciona sombra com blur */
+
 }
 
 /* Container Principal */
 .container {
     display: grid;
-    grid-template-columns: 0.7fr 1.3fr; /* Duas colunas iguais */
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
     align-items: center; /* Centralização vertical */
     justify-items: center; /* Centralização horizontal de cada coluna */
     height: 100vh; /* Preenche a altura total da tela */
+    gap: -20px; /* Define uma distância menor entre as colunas */
+    position: relative; /* Para permitir ajuste com transform */
 }
 
 /* CELULAR */
@@ -28,8 +56,22 @@ html, body {
     align-items: center; /* Garante que o conteúdo fique centralizado verticalmente */
     position: relative;
     
+    transform: translateX(150px); /* Move o celular para a direita */
+
+    /* tentativa abrir fechar*/
+    animation: openClose 5s ease-in-out infinite;
+
   }
-  
+
+  @keyframes openClose {
+    0%, 100% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(30deg);
+    }
+  }
+
   .phone {
     /* transform: rotateX(40deg); */
     position: relative;
@@ -434,6 +476,9 @@ html, body {
     border-radius: 10px;
     box-sizing: border-box;
     padding: 20px 30px;
+
+    transform: translateX(-150px); /* Move o formulário para a esquerda */
+
   }
   
   .title {
