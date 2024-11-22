@@ -304,8 +304,8 @@
                 </svg>
                 <div class="square-download"></div>
             </span>
-            <p class="title-download" onclick="downloadFile('../media/cardapioPicaPau.pdf')">Download</p>
-            <p class="title-download" onclick="openFile('./media/cardapioPicaPau.pdf')">Abrir</p>
+            <p class="title-download" onclick="downloadFile('../media/Cardapios/cardapioPicaPau.pdf')">Download</p>
+            <p class="title-download" onclick="openFile('../media/Cardapios/cardapioPicaPau.pdf')">Abrir</p>
         </label>
       </div>
       <!-- Fechar corretamente -->
@@ -370,32 +370,26 @@
 </script>
 
 <script>
-  let downloadedFiles = {}; // Objeto para rastrear arquivos baixados
-
   // Função para realizar o download do arquivo
   function downloadFile(filePath) {
     const link = document.createElement('a');
     link.href = filePath; // Caminho do arquivo
-    link.download = filePath.split('/').pop(); // Extrai o nome do arquivo para download
+    link.download = filePath.split('/').pop(); // Extrai o nome do arquivo
+    link.type = 'application/pdf'; // Define o tipo do arquivo
     link.click();
 
     // Marca o arquivo como baixado
     downloadedFiles[filePath] = true;
 
-    // Mensagem opcional de feedback
     console.log(`Arquivo "${filePath}" baixado com sucesso.`);
   }
 
   // Função para abrir o arquivo no navegador
   function openFile(filePath) {
-    if (!downloadedFiles[filePath]) {
-      alert('Por favor, faça o download primeiro antes de abrir o arquivo.');
-      return;
-    }
-
-    // Abre o arquivo em uma nova aba
-    window.open(filePath, '_blank'); // `_blank` garante nova aba
+    // Abre o arquivo diretamente em uma nova aba
+    window.open(filePath, '_blank');
   }
+
 </script>
 
 
