@@ -265,6 +265,7 @@
 
     <section id="gastronomia" class="gastronomia-section" data-aos="fade-up">
       <div class="cards-container">
+          <!--PICAPAU-->
           <div class="card">
               <img src="../media/logoCreperiapicaPau.png" alt="Logo Local 1" class="card-logo">
               <img src="../media/creperiaPicaPau1_2.png" alt="Local 1" class="card-image">
@@ -277,8 +278,25 @@
                   <button class="info-button" onclick="showInfo('creperia-picapau')">Mais informações</button>
               </div>
           </div>
+
+          <!--APROVADOS-->
+          <div class="card">
+            <img src="../media/logo-aprovados.png" alt="Logo Local 2" class="card-logo">
+            <img src="../media/aprovados.png" alt="Local 2" class="card-image">
+            <div class="card-info">
+                <p class="culinaria">Padária - lanches, bebidas e doces</p>
+                <p class="nome"><strong>Lanchonete Aprovados</strong></p>
+            </div>
+            <div class="overlay-rest">
+                <p>Saborosas refeições, lanches rápidos e atendimento acolhedor.</p>
+                <button class="info-button" onclick="showInfo('lanchonete-aprovados')">Mais informações</button>
+            </div>
+        </div>
+
+
       </div>
     </section>
+
     <!-- Seção de informações ocultas para a Creperia Pica-Pau -->
     <section id="creperia-picapau" class="hidden-info">
       <h2>Creperia Pica-Pau - Unidade 1</h2>
@@ -312,6 +330,47 @@
       <button class="info-button" onclick="hideInfo('creperia-picapau')">Fechar</button>
     </section>
 
+    <!-- Seção de informações ocultas para a Lanchonete Aprovados -->
+    <section id="lanchonete-aprovados" class="hidden-info">
+      <h2>Lanchonete Aprovados</h2>
+      <p>Bem-vindo à Lanchonete Aprovados, a comida típica de uma padoca brasileira.</p>
+
+      <h3>Bloco:</h3>
+      <p>Bloco 9</p>
+
+      <h3>Sobre:</h3>
+      <p>Servimos lanches variados estilo padaria, doces deliciosos (como nossos queridos cookies). E um atendimento de ponta.</p>
+
+      <h3>Categoria:</h3>
+      <p>Padaria - Lanches e doces</p>
+
+      <h3>Cardápio:</h3>
+      <div class="container-download">
+          <label class="label-download">
+              <input type="checkbox" class="input-download" />
+              <span class="circle-download">
+                  <svg class="icon-download" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"></path>
+                  </svg>
+                  <div class="square-download"></div>
+              </span>
+              <p class="title-download" onclick="downloadFile('../media/Cardapios/cardapioAprovados.pdf')">Download</p>
+              <p class="title-download" onclick="openFile('../media/Cardapios/cardapioAprovados.pdf', 2000)">Abrir</p>
+          </label>
+      </div>
+      <button class="info-button" onclick="hideInfo('lanchonete-aprovados')">Fechar</button>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
 
     <section id="avaliacao" class="avaliacao-section" data-aos="fade-up">
       <h2 class="avaliacao-title">Veja as Avaliações dos Restaurantes</h2>
@@ -323,6 +382,7 @@
             <select required>
               <option value="" disabled selected>Selecione um restaurante</option>
               <option value="creperia-picapau">Creperia Pica-Pau</option>
+              <option value="creperia-picapau">Lanchonete Aprovados</option>
               <!-- Adicione aqui os futuros restaurantes -->
             </select>
             <select>
@@ -346,11 +406,11 @@
           <p>Comida deliciosa e acessível. O crepe sai quentinho. Recomendo!</p>
         </div>
         <div class="avaliacao-card">
-          <img src="../media/logoRestauranteY.png" alt="Logo Restaurante Y" class="avaliacao-logo">
-          <h4>Restaurante Y</h4>
-          <p>⭐⭐⭐⭐</p>
-          <span class="avaliacao-user">Comentário de: User456</span>
-          <p>Boa variedade de pratos, mas o atendimento pode melhorar.</p>
+          <img src="../media/logo-aprovados.png" alt="Logo Restaurante Y" class="avaliacao-logo">
+          <h4>Lanchone Aprovados</h4>
+          <p>⭐⭐⭐⭐⭐</p>
+          <span class="avaliacao-user">Comentário de: manoelaelisa15</span>
+          <p>Gosto D++ do atendimento nessa lanchonete. Muitíssimo educados... Uns queridos</p>
         </div>
         <div class="avaliacao-card">
           <img src="../media/logoRestauranteZ.png" alt="Logo Restaurante Z" class="avaliacao-logo">
