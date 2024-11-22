@@ -26,10 +26,10 @@
   <nav class="main-nav">
       <img src="../media/ceubAO-logo.jpg" alt="Logo Ceubão" class="logo">
       <ul class="nav-links">
-          <li><a href="#gastronomia">Gastronomia</a></li>
-          <li><a href="#avaliacao">Avaliação</a></li>
-          <li><a href="#me-recomende">Me recomende</a></li>
-          <li><a href="signin.html">Login/Cadastro</a></li>
+        <li><a href="#gastronomia">Gastronomia</a></li>
+        <li><a href="#avaliacao">Avaliação</a></li>
+        <li><a href="#me-recomende">Me recomende</a></li>
+        <li><a href="loginHome.html">Login/Cadastro</a></li>
       </ul>
   </nav>
 </header>
@@ -51,6 +51,9 @@
           </a>
           <div class="submenu">
             <div class="submenu-item">
+              <a href="loginHome.html" class="submenu-link"> Login/Cadastro </a>
+            </div>
+            <div class="submenu-item">
               <a href="#gastronomia" class="submenu-link"> Gastronomia </a>
             </div>
             <div class="submenu-item">
@@ -58,9 +61,6 @@
             </div>
             <div class="submenu-item">
               <a href="#" class="submenu-link"> Me recomende </a>
-            </div>
-            <div class="submenu-item">
-              <a href="#" class="submenu-link"> Login/Cadastro </a>
             </div>
           </div>
         </div>
@@ -285,10 +285,10 @@
       <p>Aqui estão os detalhes sobre a Creperia Pica-Pau. Deliciosos crepes disponíveis!</p>
 
       <h3>Bloco:</h3>
-      <p>Unidade Bloco 1 e Unidade Bloco 2</p>
+      <p>Unidade Bloco 1 e Unidade Bloco 9</p>
 
       <h3>Sobre:</h3>
-      <p>Especialidade em crepes (doces e salgados), mas também </p>
+      <p>Especialidade em crepes (doces e salgados), mas também vendem bebidas e outros comidas</p>
 
       <h3>Categoria:</h3>
       <p>Culinária Francesa - Creperia</p>
@@ -304,8 +304,8 @@
                 </svg>
                 <div class="square-download"></div>
             </span>
-            <p class="title-download">Download</p>
-            <p class="title-download">Open</p>
+            <p class="title-download" onclick="downloadFile()">Download</p>
+            <p class="title-download" onclick="openFile()">Abrir</p>
         </label>
       </div>
       <!-- Fechar corretamente -->
@@ -367,6 +367,18 @@
       }
   }
 
+  // DOWNLOAD DE ARQUIVOS:
+  function downloadFile() {
+    const link = document.createElement('a');
+    link.href = '../media/cardapioPicaPau.pdf'; // Caminho do arquivo
+    link.download = '../media/cardapioPicaPau.pdf'; // Nome do arquivo para download
+    link.click();
+  }
+
+  // Função para abrir o arquivo no navegador
+  function openFile() {
+    window.open('../media/cardapioPicaPau.pdf', '_blank'); // Caminho do arquivo
+  }
 </script>
 
 </html>
