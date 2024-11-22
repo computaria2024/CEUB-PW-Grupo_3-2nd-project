@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="../media/ceubAO-logo-ICO.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="../css's/download.css">
-
+    <link rel="stylesheet" href="../css's/feedback.css">
 
 </head>
 <body>
@@ -311,6 +311,53 @@
       <!-- Fechar corretamente -->
       <button class="info-button" onclick="hideInfo('creperia-picapau')">Fechar</button>
     </section>
+
+
+    <section id="avaliacao" class="avaliacao-section" data-aos="fade-up">
+      <h2 class="avaliacao-title">Deixe sua Avaliação</h2>
+      <div class="avaliacao-container">
+        <!-- Coluna de Enviar Feedback -->
+        <div class="feedback-card">
+          <h3>Envie seu Feedback</h3>
+          <form class="feedback-form">
+            <!-- Campo de seleção para os restaurantes -->
+            <select required>
+              <option value="" disabled selected>Selecione um restaurante</option>
+              <option value="creperia-picapau">Creperia Pica-Pau</option>
+              <!-- Adicione aqui os futuros restaurantes -->
+            </select>
+            <select>
+              <option value="5">⭐⭐⭐⭐⭐</option>
+              <option value="4">⭐⭐⭐⭐</option>
+              <option value="3">⭐⭐⭐</option>
+              <option value="2">⭐⭐</option>
+              <option value="1">⭐</option>
+            </select>
+            <textarea placeholder="Descrição (opcional)"></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+    
+        <!-- Colunas de Avaliações -->
+        <div class="avaliacao-card">
+          <h4>Creperia Pica-Pau</h4>
+          <p>⭐⭐⭐⭐⭐</p>
+          <p>Comida deliciosa e ambiente acolhedor. Recomendo!</p>
+        </div>
+        <div class="avaliacao-card">
+          <h4>Restaurante Y</h4>
+          <p>⭐⭐⭐⭐</p>
+          <p>Boa variedade de pratos, mas o atendimento pode melhorar.</p>
+        </div>
+        <div class="avaliacao-card">
+          <h4>Restaurante Z</h4>
+          <p>⭐⭐⭐</p>
+          <p>O ambiente é agradável, mas a comida não é tão boa.</p>
+        </div>
+      </div>
+    </section>
+    
+    
 
     <br><br><br><br><br>
     <!-- Rodapé -->

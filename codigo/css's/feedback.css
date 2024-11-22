@@ -1,0 +1,74 @@
+/* Sessão de Avaliação */
+.avaliacao-section {
+    padding: 50px 20px;
+    background: #f8f8f8;
+    text-align: center;
+  }
+  
+  .avaliacao-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #444;
+    font-weight: bold;
+  }
+  
+  .avaliacao-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .feedback-card, .avaliacao-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .feedback-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .feedback-form input, 
+  .feedback-form select, 
+  .feedback-form textarea, 
+  .feedback-form button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .feedback-form button {
+    background: rgb(63, 16, 202);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .feedback-form button:hover {
+    background: #6a38ff;
+  }
+  
+  .avaliacao-card h4 {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  .avaliacao-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+  }
+  
