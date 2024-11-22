@@ -1,6 +1,6 @@
 /* Sessão de Avaliação */
 .avaliacao-section {
-    padding: 50px 20px;
+    padding: 40px 20px;
     background: #f8f8f8;
     text-align: center;
   }
@@ -12,6 +12,17 @@
     font-weight: bold;
   }
   
+  .avaliacao-logo {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px; /* Centraliza e adiciona espaçamento */
+    display: block;
+    object-fit: contain; /* Garante que a imagem se ajuste sem distorções */
+    border: none; /* Remove qualquer borda */
+    border-radius: 0; /* Remove o arredondamento */
+}
+
+
   .avaliacao-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -20,7 +31,7 @@
     align-items: center;
   }
   
-  .feedback-card, .avaliacao-card {
+  .feedback-card {
     background: white;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
@@ -30,6 +41,17 @@
     max-width: 250px;
   }
   
+  .avaliacao-card {
+    position: relative;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+  }
+
   .feedback-card h3 {
     font-size: 1.2rem;
     margin-bottom: 15px;
@@ -72,3 +94,15 @@
     line-height: 1.4;
   }
   
+  /* by myself */
+.avaliacao-card img {
+    position: absolute;
+    top: -65px; /* Move a logo mais para cima */
+    right: -45px; /* Move a logo mais para a direita */
+    width: 100px; /* Aumenta o tamanho da logo */
+    height: auto; /* Mantém a proporção da logo */
+    object-fit: contain; /* Evita distorções na imagem */
+    z-index: 999; /* Garante que a logo fique visível acima de outros elementos */
+    pointer-events: none; /* Evita interferência da logo em cliques ou interações com outros elementos */
+
+  }
