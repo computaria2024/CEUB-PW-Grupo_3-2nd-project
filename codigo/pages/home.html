@@ -305,7 +305,7 @@
                 <div class="square-download"></div>
             </span>
             <p class="title-download" onclick="downloadFile('../media/Cardapios/cardapioPicaPau.pdf')">Download</p>
-            <p class="title-download" onclick="openFile('../media/Cardapios/cardapioPicaPau.pdf')">Abrir</p>
+            <p class="title-download" onclick="openFile('../media/Cardapios/cardapioPicaPau.pdf', 2000)">Abrir</p>
         </label>
       </div>
       <!-- Fechar corretamente -->
@@ -370,6 +370,9 @@
 </script>
 
 <script>
+  // Objeto para rastrear arquivos baixados
+  let downloadedFiles = {}; 
+
   // Função para realizar o download do arquivo
   function downloadFile(filePath) {
     const link = document.createElement('a');
@@ -384,13 +387,15 @@
     console.log(`Arquivo "${filePath}" baixado com sucesso.`);
   }
 
-  // Função para abrir o arquivo no navegador
-  function openFile(filePath) {
-    // Abre o arquivo diretamente em uma nova aba
-    window.open(filePath, '_blank');
+  // Função para abrir o arquivo no navegador após a animação
+  function openFile(filePath, delay = 500) {
+    setTimeout(() => {
+      // Abre o arquivo diretamente em uma nova aba após o delay
+      window.open(filePath, '_blank');
+    }, delay);
   }
-
 </script>
+
 
 
 
