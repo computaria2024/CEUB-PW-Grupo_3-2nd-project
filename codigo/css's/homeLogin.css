@@ -17,6 +17,9 @@ html, body {
     width: 100vw; /* Preenche a largura total da tela */
 }
 
+
+/*TODO: EDITAR FOTO E ALTERAR AQUI*/ 
+
 .image-section-login-home {
     background: url('../media/praca2.png') no-repeat center center; /* Define a imagem como fundo */
     background-size: cover; /* Faz a imagem preencher todo o lado esquerdo */
