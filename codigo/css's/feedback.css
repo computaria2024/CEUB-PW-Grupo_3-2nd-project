@@ -3,19 +3,23 @@
     padding: 40px 20px;
     background: #f8f8f8;
     text-align: center;
-  }
+}
 
   /* BOTA VER TODOS*/ 
 /* Estilo da seção de cabeçalho */
 .avaliacao-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  justify-content: center; /* Centraliza o conteúdo por padrão */
+  gap: 20px;
+  position: relative; /* Permite posicionar o botão manualmente */
+  margin-bottom: 60px;
 }
 
 /* Estilo do botão "Ver todas avaliações" */
 .ver-todas-btn {
+  position: absolute; /* Posiciona o botão no canto direito */
+  right: 0; /* Alinha à direita */
   background: #a78affb1;
   color: white;
   padding: 10px 15px;
@@ -46,12 +50,15 @@
   }
   
 
-  .avaliacao-title {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #444;
-    font-weight: bold;
-  }
+/* Estilo do título */
+.avaliacao-title {
+  font-size: 2rem;
+  color: #444;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1; /* Faz o título ocupar o máximo de espaço possível */
+  margin: 0; /* Remove margens para um alinhamento mais preciso */
+}
   
   .avaliacao-logo {
     width: 50px;
