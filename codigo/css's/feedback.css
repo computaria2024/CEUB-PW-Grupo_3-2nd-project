@@ -4,7 +4,39 @@
     background: #f8f8f8;
     text-align: center;
   }
-  
+
+  /* BOTA VER TODOS*/ 
+/* Estilo da seção de cabeçalho */
+.avaliacao-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Estilo do botão "Ver todas avaliações" */
+.ver-todas-btn {
+  background: #a78affb1;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.ver-todas-btn:hover {
+  background: #6a38ffd4;
+  transform: translateY(-2px);
+}
+
+.ver-todas-btn:active {
+  transform: translateY(1px);
+}
+
+
+  /* RESTANTE DO CODIGO DE FEEDBACKS*/ 
   .avaliacao-user {
     display: block;
     font-size: 0.85rem;
