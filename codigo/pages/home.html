@@ -307,6 +307,23 @@
           </div>
         </div>
 
+        <!-- HAPPY HARRY -->
+        <div class="card">
+          <img src="../media/logoHappyHarry.png" alt="Logo Happy Harry" class="card-logo">
+          <img src="../media/happyharry.png" alt="Happy Harry" class="card-image">
+          <div class="card-info">
+              <p class="culinaria">Sorveteria Artesanal</p>
+              <p class="nome"><strong>Happy Harry</strong></p>
+          </div>
+          <div class="overlay-rest">
+              <p>Experimente os melhores sorvetes artesanais com sabores incríveis e únicos!</p>
+              <button class="info-button" onclick="showInfo('happy-harry')">Mais informações</button>
+          </div>
+        </div>
+
+
+
+
 
       </div>
     </section>
@@ -350,7 +367,7 @@
       <p>Bem-vindo à Lanchonete Aprovados, a comida típica de uma padoca brasileira.</p>
 
       <h3>Bloco:</h3>
-      <p>Bloco 9</p>
+      <p>Bloco 9 (2ª praça de alimentação)</p>
 
       <h3>Sobre:</h3>
       <p>Servimos lanches variados estilo padaria, doces deliciosos (como nossos queridos cookies). E um atendimento de ponta.</p>
@@ -381,13 +398,13 @@
       <p>Aqui estão os detalhes sobre o Suco & Tal. Descubra nossa variedade de sucos naturais e opções saudáveis!</p>
 
       <h3>Bloco:</h3>
-      <p>Bloco 2</p>
+      <p>Bloco 3 (1ª praça de alimentação - PIER)</p>
 
       <h3>Sobre:</h3>
-      <p>Especialidade em sucos naturais, smoothies e lanches saudáveis, perfeitos para qualquer hora do dia.</p>
+      <p>Especialidade em sucos naturais, sanduiches, salgados e lanches diversos; perfeitos para qualquer hora do dia.</p>
 
       <h3>Categoria:</h3>
-      <p>Sucos Naturais e Lanches Saudáveis</p>
+      <p>Sucos Naturais e Lanches</p>
 
       <h3>Cardápio:</h3>
       <div class="container-download">
@@ -407,6 +424,37 @@
       <button class="info-button" onclick="hideInfo('suco-e-tal')">Fechar</button>
     </section>
 
+    <!-- Seção de informações ocultas para Happy Harry -->
+    <section id="happy-harry" class="hidden-info">
+      <h2>Happy Harry - Unidade 1</h2>
+      <p>Venha se deliciar com nossos sorvetes artesanais de alta qualidade. Ingredientes frescos, sabores inovadores!</p>
+
+      <h3>Bloco:</h3>
+      <p>Bloco 9 (2ª praça de alimentação)</p>
+
+      <h3>Sobre:</h3>
+      <p>Especializados em sorvetes artesanais com sabores inovadores e ingredientes frescos. Oferecemos opções veganas e sem lactose!</p>
+
+      <h3>Categoria:</h3>
+      <p>Sorveteria Artesanal</p>
+
+      <h3>Cardápio:</h3>
+      <div class="container-download">
+          <label class="label-download">
+              <input type="checkbox" class="input-download" />
+              <span class="circle-download">
+                  <svg class="icon-download" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"></path>
+                  </svg>
+                  <div class="square-download"></div>
+              </span>
+              <p class="title-download" onclick="downloadFile('../media/Cardapios/CardapioHappyHarry.pdf')">Download</p>
+              <p class="title-download" onclick="openFile('../media/Cardapios/CardapioHappyHarry.pdf', 2000)">Abrir</p>
+          </label>
+      </div>
+      <!-- Fechar corretamente -->
+      <button class="info-button" onclick="hideInfo('happy-harry')">Fechar</button>
+    </section>
 
 
 
