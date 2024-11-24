@@ -391,7 +391,33 @@
           </div>
         </div>
 
+        <!-- RICARDO SUSHI -->
+        <div class="card">
+          <img src="../media/logoRicardoSushi.png" alt="Logo Ricardo Sushi" class="card-logo">
+          <img src="../media/ricardoSushi.png" alt="Ricardo Sushi" class="card-image">
+          <div class="card-info">
+              <p class="culinaria">Culinária Japonesa</p>
+              <p class="nome"><strong>Ricardo Sushi</strong></p>
+          </div>
+          <div class="overlay-rest">
+              <p>Explore o melhor da culinária japonesa com pratos frescos e deliciosos, feitos com os melhores ingredientes.</p>
+              <button class="info-button" onclick="showInfo('ricardo-sushi')">Mais informações</button>
+          </div>
+        </div>
 
+        <!-- JONS COOKIES -->
+        <div class="card">
+          <img src="../media/logoJohnsCookies.png" alt="Logo Johns Cookies" class="card-logo">
+          <img src="../media/johnsCookies.png" alt="Jons Cookies" class="card-image">
+          <div class="card-info">
+              <p class="culinaria">Sobremesas e Doces</p>
+              <p class="nome"><strong>John's Cookies</strong></p>
+          </div>
+          <div class="overlay-rest">
+              <p>Delicie-se com os cookies artesanais e sobremesas exclusivas da Jons Cookies, feitos com ingredientes selecionados.</p>
+              <button class="info-button" onclick="showInfo('johns-cookies')">Mais informações</button>
+          </div>
+        </div>
 
 
 
@@ -663,7 +689,7 @@
 
       <h3>Bloco:</h3>
       Bloco 9 (2ª praça de alimentação)
-      
+
       <h3>Sobre:</h3>
       <p>Além de refeições variadas, o Apetit's oferece uma linha exclusiva de hambúrgueres de frango empanado, com receitas únicas e muito saborosas, ideais para qualquer momento.</p>
 
@@ -688,6 +714,70 @@
       <button class="info-button" onclick="hideInfo('apetits')">Fechar</button>
     </section>
 
+    <!-- Seção de informações ocultas para Ricardo Sushi -->
+    <section id="ricardo-sushi" class="hidden-info">
+      <h2>Ricardo Sushi</h2>
+      <p>Ricardo Sushi traz para você o sabor autêntico do Japão.</p>
+
+      <h3>Bloco:</h3>
+      <p>Bloco 3 (1ª praça de alimentação - PIER)</p>
+
+
+      <h3>Sobre:</h3>
+      <p>Especializado em comida japonesa, o Ricardo Sushi oferece uma experiência gastronômica única, com opções para todos os gostos, incluindo sushis, temakis, sashimis, pokes e combinados incríveis.</p>
+
+      <h3>Categoria:</h3>
+      <p>Culinária Japonesa</p>
+
+      <h3>Cardápio:</h3>
+      <div class="container-download">
+          <label class="label-download">
+              <input type="checkbox" class="input-download" />
+              <span class="circle-download">
+                  <svg class="icon-download" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"></path>
+                  </svg>
+                  <div class="square-download"></div>
+              </span>
+              <p class="title-download" onclick="downloadFile('../media/Cardapios/CardapioRicardoSushi.pdf')">Download</p>
+              <p class="title-download" onclick="openFile('../media/Cardapios/CardapioRicardoSushi.pdf', 2000)">Abrir</p>
+          </label>
+      </div>
+      <!-- Fechar corretamente -->
+      <button class="info-button" onclick="hideInfo('ricardo-sushi')">Fechar</button>
+    </section>
+
+    <!-- Seção de informações ocultas para Jons Cookies -->
+    <section id="johns-cookies" class="hidden-info">
+      <h2>Jons Cookies - Unidade 1</h2>
+      <p>Cookies preparados com paixão e criatividade.</p>
+
+      <h3>Bloco:</h3>
+      <p>Bloco 9</p>
+
+      <h3>Sobre:</h3>
+      <p>A Jons Cookies é famosa por seus cookies frescos e quentinhos, recheados e com opções variadas. Sobremesas como brownies, cheesecakes e milkshakes também fazem parte do cardápio.</p>
+
+      <h3>Categoria:</h3>
+      <p>Sobremesas e Doces</p>
+
+      <h3>Cardápio:</h3>
+      <div class="container-download">
+          <label class="label-download">
+              <input type="checkbox" class="input-download" />
+              <span class="circle-download">
+                  <svg class="icon-download" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"></path>
+                  </svg>
+                  <div class="square-download"></div>
+              </span>
+              <p class="title-download" onclick="downloadFile('../media/Cardapios/CardapioJohnsCookies.pdf')">Download</p>
+              <p class="title-download" onclick="openFile('../media/Cardapios/CardapioJohnsCookies.pdf', 2000)">Abrir</p>
+          </label>
+      </div>
+      <!-- Fechar corretamente -->
+      <button class="info-button" onclick="hideInfo('johns-cookies')">Fechar</button>
+    </section>
 
 
 
