@@ -363,7 +363,33 @@
           </div>
         </div>
 
+        <!-- TABOM -->
+        <div class="card">
+          <img src="../media/logoTabom.png" alt="Logo Tabom" class="card-logo">
+          <img src="../media/tabom.png" alt="Tabom" class="card-image">
+          <div class="card-info">
+              <p class="culinaria">Refeições Caseiras e Bebidas</p>
+              <p class="nome"><strong>Tabom</strong></p>
+          </div>
+          <div class="overlay-rest">
+              <p>Desfrute de refeições caseiras, salgados e bebidas refrescantes. Nosso açaí é único.</p>
+              <button class="info-button" onclick="showInfo('tabom')">Mais informações</button>
+          </div>
+        </div>
 
+        <!-- APETIT'S -->
+        <div class="card">
+          <img src="../media/logoApetits.png" alt="Logo Apetit's" class="card-logo">
+          <img src="../media/apetits.png" alt="Apetit's" class="card-image">
+          <div class="card-info">
+              <p class="culinaria">Refeições e Hambúrgueres de Frango</p>
+              <p class="nome"><strong>Apetit's</strong></p>
+          </div>
+          <div class="overlay-rest">
+              <p>Descubra refeições saborosas e os melhores hambúrgueres de frango empanado, tudo com preços incríveis!</p>
+              <button class="info-button" onclick="showInfo('apetits')">Mais informações</button>
+          </div>
+        </div>
 
 
 
@@ -596,6 +622,70 @@
       </div>
       <!-- Fechar corretamente -->
       <button class="info-button" onclick="hideInfo('fast-grill')">Fechar</button>
+    </section>
+
+    <!-- Seção de informações ocultas para Tabom -->
+    <section id="tabom" class="hidden-info">
+      <h2>Tabom - Unidade 1</h2>
+      <p>O Tabom é conhecido por oferecer refeições caseiras saborosas, acompanhadas de salgados e bebidas.</p>
+
+      <h3>Bloco:</h3>
+      <p>Bloco 3 (1ª praça de alimentação - PIER)</p>
+
+      <h3>Sobre:</h3>
+      <p>Comida feita com carinho e sabor de casa. Também oferecem salgados diversos e bebidas refrescantes, incluindo também especialidade em açaí.</p>
+
+      <h3>Categoria:</h3>
+      <p>Refeições Caseiras e Bebidas</p>
+
+      <h3>Cardápio:</h3>
+      <div class="container-download">
+          <label class="label-download">
+              <input type="checkbox" class="input-download" />
+              <span class="circle-download">
+                  <svg class="icon-download" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"></path>
+                  </svg>
+                  <div class="square-download"></div>
+              </span>
+              <p class="title-download" onclick="downloadFile('../media/Cardapios/CardapioTabom.pdf')">Download</p>
+              <p class="title-download" onclick="openFile('../media/Cardapios/CardapioTabom.pdf', 2000)">Abrir</p>
+          </label>
+      </div>
+      <!-- Fechar corretamente -->
+      <button class="info-button" onclick="hideInfo('tabom')">Fechar</button>
+    </section>
+
+    <!-- Seção de informações ocultas para Apetit's -->
+    <section id="apetits" class="hidden-info">
+      <h2>Apetit's</h2>
+      <p>Apetit's é famoso restaurante/lanchonete do ceub, sendo uma ótima opção para quem busca sabor e qualidade com preços acessíveis.</p>
+
+      <h3>Bloco:</h3>
+      Bloco 9 (2ª praça de alimentação)
+      
+      <h3>Sobre:</h3>
+      <p>Além de refeições variadas, o Apetit's oferece uma linha exclusiva de hambúrgueres de frango empanado, com receitas únicas e muito saborosas, ideais para qualquer momento.</p>
+
+      <h3>Categoria:</h3>
+      <p>Refeições e Hambúrgueres de Frango</p>
+
+      <h3>Cardápio:</h3>
+      <div class="container-download">
+          <label class="label-download">
+              <input type="checkbox" class="input-download" />
+              <span class="circle-download">
+                  <svg class="icon-download" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"></path>
+                  </svg>
+                  <div class="square-download"></div>
+              </span>
+              <p class="title-download" onclick="downloadFile('../media/Cardapios/cardapioApetits.pdf')">Download</p>
+              <p class="title-download" onclick="openFile('../media/Cardapios/cardapioApetits.pdf', 2000)">Abrir</p>
+          </label>
+      </div>
+      <!-- Fechar corretamente -->
+      <button class="info-button" onclick="hideInfo('apetits')">Fechar</button>
     </section>
 
 
