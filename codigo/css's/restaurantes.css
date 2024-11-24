@@ -16,12 +16,16 @@
     transform: translate(-50%, -50%); /* Ajusta o ponto central */
 }
 
+/* Quadros de restaurantes */
 .cards-container {
-    position: relative; /* Garante que os elementos dentro do container possam ser ajustados */
-    overflow: visible; /* Permite que o conteúdo ultrapasse os limites do container */
-    z-index: 1; /* Prioridade do container no empilhamento */
-    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Configuração responsiva */
+    gap: 60px; /* Espaçamento entre os cards */
+    max-width: 1100px; /* Define uma largura máxima para o container */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 0 50px; /* Espaçamento interno nas laterais para ajuste fino */
 }
+
 
 .card-logo {
     position: absolute;

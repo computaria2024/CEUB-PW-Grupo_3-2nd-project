@@ -60,15 +60,19 @@
   margin: 0; /* Remove margens para um alinhamento mais preciso */
 }
   
-  .avaliacao-logo {
-    width: 50px;
-    height: 50px;
-    margin: 0 auto 10px; /* Centraliza e adiciona espaçamento */
-    display: block;
-    object-fit: contain; /* Garante que a imagem se ajuste sem distorções */
-    border: none; /* Remove qualquer borda */
-    border-radius: 0; /* Remove o arredondamento */
+.avaliacao-logo {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px; /* Centraliza horizontalmente e adiciona espaçamento inferior */
+  display: block;
+  object-fit: contain; /* Garante que a imagem se ajuste sem distorções */
+  max-width: 100%; /* Impede que a logo ultrapasse o limite do container */
+  border: none; /* Remove qualquer borda */
+  border-radius: 0; /* Remove o arredondamento */
+  position: relative; /* Garante que a posição possa ser ajustada de forma mais precisa */
+  left: -240px; /* Move ligeiramente a logo para a esquerda */
 }
+
 
 
   .avaliacao-container {

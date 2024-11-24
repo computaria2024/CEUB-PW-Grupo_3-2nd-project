@@ -293,6 +293,20 @@
             </div>
         </div>
 
+        <!-- SUCO & TAL -->
+        <div class="card">
+          <img src="../media/LogoSuco&Tal.png" alt="Logo Suco & Tal" class="card-logo">
+          <img src="../media/sucoetal.png" alt="Suco & Tal" class="card-image">
+          <div class="card-info">
+            <p class="culinaria">Sucos Naturais e Lanches Saudáveis</p>
+            <p class="nome"><strong>Suco & Tal</strong></p>
+          </div>
+          <div class="overlay-rest">
+            <p>Experimente nossos sucos naturais, preparados com ingredientes frescos e saudáveis.</p>
+            <button class="info-button" onclick="showInfo('suco-e-tal')">Mais informações</button>
+          </div>
+        </div>
+
 
       </div>
     </section>
@@ -361,6 +375,37 @@
       <button class="info-button" onclick="hideInfo('lanchonete-aprovados')">Fechar</button>
     </section>
 
+    <!-- Seção de informações ocultas para Suco & Tal -->
+    <section id="suco-e-tal" class="hidden-info">
+      <h2>Suco & Tal</h2>
+      <p>Aqui estão os detalhes sobre o Suco & Tal. Descubra nossa variedade de sucos naturais e opções saudáveis!</p>
+
+      <h3>Bloco:</h3>
+      <p>Bloco 2</p>
+
+      <h3>Sobre:</h3>
+      <p>Especialidade em sucos naturais, smoothies e lanches saudáveis, perfeitos para qualquer hora do dia.</p>
+
+      <h3>Categoria:</h3>
+      <p>Sucos Naturais e Lanches Saudáveis</p>
+
+      <h3>Cardápio:</h3>
+      <div class="container-download">
+        <label class="label-download">
+          <input type="checkbox" class="input-download" />
+          <span class="circle-download">
+            <svg class="icon-download" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"></path>
+            </svg>
+            <div class="square-download"></div>
+          </span>
+          <p class="title-download" onclick="downloadFile('../media/Cardapios/CardapioSuco&tal.pdf')">Download</p>
+          <p class="title-download" onclick="openFile('../media/Cardapios/CardapioSuco&tal.pdf', 2000)">Abrir</p>
+        </label>
+      </div>
+      <!-- Fechar corretamente -->
+      <button class="info-button" onclick="hideInfo('suco-e-tal')">Fechar</button>
+    </section>
 
 
 
@@ -418,11 +463,11 @@
           <p>Gosto D++ do atendimento nessa lanchonete. Muitíssimo educados... Uns queridos</p>
         </div>
         <div class="avaliacao-card">
-          <img src="../media/logoRestauranteZ.png" alt="Logo Restaurante Z" class="avaliacao-logo">
-          <h4>Restaurante Z</h4>
+          <img src="../media/LogoSuco&Tal.png" alt="Logo Restaurante Z" class="avaliacao-logo">
+          <h4>Suco & Tal</h4>
           <p>⭐⭐⭐</p>
-          <span class="avaliacao-user">Comentário de: User789</span>
-          <p>O ambiente é agradável, mas a comida não é tão boa.</p>
+          <span class="avaliacao-user">Comentário de: pangas10</span>
+          <p>O quebra galho de todo dia. Tem de tudo. Indispensável. Simplesmente, bom demais!</p>
         </div>
       </div>
     </section>
