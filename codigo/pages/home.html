@@ -461,6 +461,19 @@
           </div>
         </div>
 
+        <!-- THE COFFEE -->
+        <div class="card">
+          <img src="../media/logothecoffee.png" alt="Logo The Coffee" class="card-logo">
+          <img src="../media/theCoffee.jpg" alt="The Coffee" class="card-image">
+          <div class="card-info">
+              <p class="culinaria">Cafeteria - Café e Lanches</p>
+              <p class="nome"><strong>The Coffee</strong></p>
+          </div>
+          <div class="overlay-rest">
+              <p>Desfrute dos melhores cafés, acompanhados de deliciosos lanches e bolos artesanais.</p>
+              <button class="info-button" onclick="showInfo('thecoffee')">Mais informações</button>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -916,7 +929,30 @@
       <button class="info-button" onclick="hideInfo('creperia-pica-pau-2')">Fechar</button>
     </section>
 
-
+    <!-- Seção de informações ocultas para The Coffee -->
+    <section id="thecoffee" class="hidden-info">
+      <h2>The Coffee</h2>
+      <p>Excelente opção para quem ama um bom café e deliciosos acompanhamentos.</p>
+  
+      <h3>Bloco:</h3>
+      <p>Bloco 1</p>
+  
+      <h3>Sobre:</h3>
+      <p>Especialidade em cafés frescos e lanches deliciosos, incluindo bolos artesanais e opções saudáveis.</p>
+  
+      <h3>Categoria:</h3>
+      <p>Cafeteria - Café e Lanches</p>
+  
+      <h3>Cardápio:</h3>
+      <div class="container-download">
+          <!-- Link para o cardápio virtual -->
+          <a href="https://thecoffee.jp/shortcut/brasil/brasilia/the-coffee-ceub/menu" target="_blank">
+              <button class="info-button">Ver Cardápio Virtual</button>
+          </a>
+      </div>
+      <button class="info-button" onclick="hideInfo('thecoffee')">Fechar</button>
+    </section>
+  
 
 
 
@@ -949,7 +985,7 @@
               <option value="brasilcacau">Brasil Cacau</option>
               <option value="drpizza">Dr. Pizza</option>
               <option value="lanchoneteaprovados">Lanchonete Aprovados</option>
-
+              <option value="thecoffee">The Coffee</option>
             </select>
             <select>
               <option value="5">⭐⭐⭐⭐⭐</option>
