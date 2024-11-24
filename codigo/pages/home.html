@@ -26,7 +26,7 @@
   <nav class="main-nav">
       <img src="../media/ceubAO-logo.jpg" alt="Logo Ceubão" class="logo">
       <ul class="nav-links">
-        <li><a href="#gastronomia">Gastronomia</a></li>
+        <li><a href="#title-gastronomia">Gastronomia</a></li>
         <li><a href="#avaliacao">Avaliação</a></li>
         <li><a href="#me-recomende">Me recomende</a></li>
         <li><a href="loginHome.html">Login/Cadastro</a></li>
@@ -54,7 +54,7 @@
               <a href="loginHome.html" class="submenu-link"> Login/Cadastro </a>
             </div>
             <div class="submenu-item">
-              <a href="#gastronomia" class="submenu-link"> Gastronomia </a>
+              <a href="#title-gastronomia" class="submenu-link"> Gastronomia </a>
             </div>
             <div class="submenu-item">
               <a href="#avaliacao" class="submenu-link"> Avaliação </a>
@@ -255,7 +255,7 @@
     </section>
 
     <!-- Sessão Gastronomia Ceub -->
-    <section class="title-gastronomia" data-aos="fade-up">
+    <section id="title-gastronomia" class="title-gastronomia" data-aos="fade-up">
       <div class="image-container">
         <div class="overlay-praca" data-aos="fade-up"></div>
         <img src="../media/praca.jpeg" alt="praçaPIERceub">
@@ -335,8 +335,6 @@
           </div>
         </div>
 
-        
-
         <!-- KMART -->
         <div class="card">
           <img src="../media/logokmart.png" alt="Logo Kmart" class="card-logo">
@@ -350,6 +348,21 @@
               <button class="info-button" onclick="showInfo('kmart')">Mais informações</button>
           </div>
         </div>
+
+        <!-- FAST GRILL -->
+        <div class="card">
+          <img src="../media/logoFastgrill.png" alt="Logo Fast Grill" class="card-logo">
+          <img src="../media/fastgrill.png" alt="Fast Grill" class="card-image">
+          <div class="card-info">
+              <p class="culinaria">Refeições e Lanches</p>
+              <p class="nome"><strong>Fast Grill</strong></p>
+          </div>
+          <div class="overlay-rest">
+              <p>Saboreie refeições deliciosas para almoço e jantar, além de lanches rápidos e gostosos!</p>
+              <button class="info-button" onclick="showInfo('fast-grill')">Mais informações</button>
+          </div>
+        </div>
+
 
 
 
@@ -553,6 +566,37 @@
       <button class="info-button" onclick="hideInfo('kmart')">Fechar</button>
     </section>
 
+    <!-- Seção de informações ocultas para Fast Grill -->
+    <section id="fast-grill" class="hidden-info">
+      <h2>Fast Grill - Unidade 1</h2>
+      <p>O Fast Grill é a escolha perfeita para quem busca refeições completas e saborosas, além de lanches rápidos, temos pastéis deliciosos.</p>
+
+      <h3>Bloco:</h3>
+      <p>Bloco 3 (1ª praça de alimentação - PIER)</p>
+
+      <h3>Sobre:</h3>
+      <p>Especializados em refeições deliciosas, com opções para almoço e jantar. Também oferecem bebidas, pastéis e outros lanches.</p>
+
+      <h3>Categoria:</h3>
+      <p>Refeições e Lanches</p>
+
+      <h3>Cardápio:</h3>
+      <div class="container-download">
+          <label class="label-download">
+              <input type="checkbox" class="input-download" />
+              <span class="circle-download">
+                  <svg class="icon-download" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"></path>
+                  </svg>
+                  <div class="square-download"></div>
+              </span>
+              <p class="title-download" onclick="downloadFile('../media/Cardapios/CardapioFastGrill.pdf')">Download</p>
+              <p class="title-download" onclick="openFile('../media/Cardapios/CardapioFastGrill.pdf', 2000)">Abrir</p>
+          </label>
+      </div>
+      <!-- Fechar corretamente -->
+      <button class="info-button" onclick="hideInfo('fast-grill')">Fechar</button>
+    </section>
 
 
 
