@@ -419,7 +419,47 @@
           </div>
         </div>
 
+        <!-- BRASIL CACAU -->
+        <div class="card">
+          <img src="../media/logoBrasilCacau.png" alt="Logo Brasil Cacau" class="card-logo">
+          <img src="../media/brasilcacau.png" alt="Brasil Cacau" class="card-image">
+          <div class="card-info">
+              <p class="culinaria">Chocolates e Sobremesas</p>
+              <p class="nome"><strong>Brasil Cacau</strong></p>
+          </div>
+          <div class="overlay-rest">
+              <p>Experimente os deliciosos chocolates artesanais, trufas e sobremesas especiais da Brasil Cacau, feitos para encantar seu paladar.</p>
+              <button class="info-button" onclick="showInfo('brasil-cacau')">Mais informações</button>
+          </div>
+        </div>
 
+        <!-- DR. PIZZA -->
+        <div class="card">
+          <img src="../media/logoDrPizza.png" alt="Logo Dr. Pizza" class="card-logo">
+          <img src="../media/drpizza.png" alt="Dr. Pizza" class="card-image">
+          <div class="card-info">
+              <p class="culinaria">Pizzas Artesanais</p>
+              <p class="nome"><strong>Dr. Pizza</strong></p>
+          </div>
+          <div class="overlay-rest">
+              <p>Descubra o sabor delicioso das pizzas do Dr. Pizza, Churros feitos na hora e bebidas Bubble</p>
+              <button class="info-button" onclick="showInfo('dr-pizza')">Mais informações</button>
+          </div>
+        </div>
+
+        <!-- CREPERIA PICA PAU - UNIDADE 2 -->
+        <div class="card">
+          <img src="../media/logoCreperiapicaPau.png" alt="Logo Creperia Pica Pau" class="card-logo">
+          <img src="../media/picapau2.png" alt="Creperia Pica Pau - Unidade 2" class="card-image">
+          <div class="card-info">
+              <p class="culinaria">Culinária Francesa - Creperia</p>
+              <p class="nome"><strong>Creperia Pica Pau - Unidade 2</strong></p>
+          </div>
+          <div class="overlay-rest">
+              <p>Experimente deliciosos crepes, doces e salgados, preparados na hora, em nossa outra unidade!</p>
+              <button class="info-button" onclick="showInfo('creperia-pica-pau-2')">Mais informações</button>
+          </div>
+        </div>
 
 
       </div>
@@ -753,7 +793,7 @@
       <p>Cookies preparados com paixão e criatividade.</p>
 
       <h3>Bloco:</h3>
-      <p>Bloco 9</p>
+      Bloco 9 (2ª praça de alimentação)
 
       <h3>Sobre:</h3>
       <p>A Jons Cookies é famosa por seus cookies frescos e quentinhos, recheados e com opções variadas. Sobremesas como brownies, cheesecakes e milkshakes também fazem parte do cardápio.</p>
@@ -779,8 +819,102 @@
       <button class="info-button" onclick="hideInfo('johns-cookies')">Fechar</button>
     </section>
 
+    <!-- Seção de informações ocultas para Brasil Cacau -->
+    <section id="brasil-cacau" class="hidden-info">
+      <h2>Brasil Cacau</h2>
+      <p>Brasil Cacau é sinônimo de chocolates incríveis, com uma variedade de trufas, bombons, barras e sobremesas que celebram os sabores únicos do Brasil.</p>
+
+      <h3>Bloco:</h3>
+      <p>Bloco 3 (1ª praça de alimentação - PIER)</p>
+
+      <h3>Sobre:</h3>
+      <p>Brasil Cacau oferece uma experiência completa para amantes de chocolates. Produtos perfeitos para presentear ou se deliciar em qualquer ocasião.</p>
+
+      <h3>Categoria:</h3>
+      <p>Chocolates e Sobremesas</p>
+
+      <h3>Cardápio:</h3>
+      <div class="container-download">
+          <label class="label-download">
+              <input type="checkbox" class="input-download" />
+              <span class="circle-download">
+                  <svg class="icon-download" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"></path>
+                  </svg>
+                  <div class="square-download"></div>
+              </span>
+              <p class="title-download" onclick="downloadFile('../media/Cardapios/CardapioBrasilCacau.pdf')">Download</p>
+              <p class="title-download" onclick="openFile('../media/Cardapios/CardapioBrasilCacau.pdf', 2000)">Abrir</p>
+          </label>
+      </div>
+      <!-- Fechar corretamente -->
+      <button class="info-button" onclick="hideInfo('brasil-cacau')">Fechar</button>
+    </section>
+
+    <!-- Seção de informações ocultas para Dr. Pizza -->
+    <section id="dr-pizza" class="hidden-info">
+      <h2>Dr. Pizza</h2>
+      <p>Pizzas saborosas, além de sobremesas e bebidas especiais</p>
+
+      <h3>Bloco:</h3>
+      <p>Bloco 3 (1ª praça de alimentação - PIER)</p>
 
 
+      <h3>Sobre:</h3>
+      <p>O Dr. Pizza combina tradição e inovação em suas pizzas, oferecendo desde os sabores clássicos até criações exclusivas para os mais exigentes paladares. Além de deliciosos churros e bebibas Bubble</p>
+
+      <h3>Categoria:</h3>
+      <p>Pizzas, churros e bebidas</p>
+
+      <h3>Cardápio:</h3>
+      <div class="container-download">
+          <label class="label-download">
+              <input type="checkbox" class="input-download" />
+              <span class="circle-download">
+                  <svg class="icon-download" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"></path>
+                  </svg>
+                  <div class="square-download"></div>
+              </span>
+              <p class="title-download" onclick="downloadFile('../media/Cardapios/CardapioDrPizza.pdf')">Download</p>
+              <p class="title-download" onclick="openFile('../media/Cardapios/CardapioDrPizza.pdf', 2000)">Abrir</p>
+          </label>
+      </div>
+      <!-- Fechar corretamente -->
+      <button class="info-button" onclick="hideInfo('dr-pizza')">Fechar</button>
+    </section>
+
+    <!-- Seção de informações ocultas para Creperia Pica Pau - Unidade 2 -->
+    <section id="creperia-pica-pau-2" class="hidden-info">
+      <h2>Creperia Pica-Pau - Unidade 2</h2>
+      <p>Aqui estão os detalhes sobre a Creperia Pica-Pau. Deliciosos crepes disponíveis!</p>
+
+      <h3>Bloco:</h3>
+      Bloco 9 (2ª praça de alimentação)
+
+      <h3>Sobre:</h3>
+      <p>Especialidade em crepes (doces e salgados), mas também vendem bebidas e outros comidas</p>
+
+      <h3>Categoria:</h3>
+      <p>Culinária Francesa - Creperia</p>
+
+      <h3>Cardápio:</h3>
+      <div class="container-download">
+          <label class="label-download">
+              <input type="checkbox" class="input-download" />
+              <span class="circle-download">
+                  <svg class="icon-download" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"></path>
+                  </svg>
+                  <div class="square-download"></div>
+              </span>
+              <p class="title-download" onclick="downloadFile('../media/Cardapios/cardapioPicaPau.pdf')">Download</p>
+              <p class="title-download" onclick="openFile('../media/Cardapios/cardapioPicaPau.pdf', 2000)">Abrir</p>
+          </label>
+      </div>
+      <!-- Fechar corretamente -->
+      <button class="info-button" onclick="hideInfo('creperia-pica-pau-2')">Fechar</button>
+    </section>
 
 
 
