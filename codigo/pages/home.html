@@ -1023,38 +1023,47 @@
     </section>
     
     <!-- RECOMENDAÇÃO: -->
-    <section id="me-recomende" class="recommendation-section" data-aos="fade-up">
-      <h2>Me Recomende</h2>
-      <form id="recommendation-form">
-        <label for="cuisine">Qual tipo de culinária você prefere?</label>
-        <select id="cuisine" name="cuisine">
-          <option value="japonesa">Japonesa</option>
-          <option value="francesa">Francesa</option>
-          <option value="artesanal">Hambúrguer Artesanal</option>
-          <option value="doces">Doces</option>
-          <option value="saudavel">Saudável</option>
+    <section id="me-recomende" data-aos="fade-up">
+      <h2>Descubra seu restaurante ideal</h2>
+      <form id="form-recomendacao">
+
+          <label for="tipoComida">Tipo de comida:</label>
+          <select id="tipoComida">
+            <option value="refeicoes">Refeições</option>
+            <option value="lanchesPequenos">Lanches pra enganar a fome</option>
+            <option value="lanchesMaiores">Lanches pra matar a fome</option>
+            <option value="bebidas">Beber Algo</option>
+            <option value="gelatos">Gelatos</option>
         </select>
-    
-        <label for="price-range">Qual a faixa de preço?</label>
-        <select id="price-range" name="price-range">
-          <option value="baixo">Baixo</option>
-          <option value="medio">Médio</option>
-          <option value="alto">Alto</option>
+
+        <label for="orcamento">Orçamento:</label>
+        <select id="orcamento" name="orcamento">
+            <option value="baixo">Baixo</option>
+            <option value="medio">Médio</option>
+            <option value="alto">Alto</option>
         </select>
-    
-        <label for="special-requirements">Requisitos especiais:</label>
-        <input type="text" id="special-requirements" name="special-requirements" placeholder="e.g., vegano, sem lactose">
-    
-        <button type="button" id="get-recommendation">Recomendar</button>
+
+        <label for="doce-sal">Algo Doce ou Salgado:</label>
+        <select id="doce-sal" name="doce-sal">
+            <option value="baixo">Salgado</option>
+            <option value="doce">Doce</option>
+            <option value="alto">Não se encaixa</option>
+        </select>
+
+        <label for="culinaria">Preferencia por culinária</label>
+        <select id="culinaria" name="culinaria">
+            <option value="francesa">Francesda</option>
+            <option value="japonesa">Japonesa</option>
+            <option value="caseira">Caseira</option>
+            <option value="default">Sem preferência</option>
+        </select>
+
+        <button class="info-button" type="button" onclick="getRecommendation()">Me recomende!</button>
+
       </form>
-    
-      <div id="recommendation-results" class="hidden">
-        <h3>Sugestões para você:</h3>
-        <ul id="results-list"></ul>
-      </div>
+
+      <div id="resultado-recomendacao"></div>
     </section>
-    
-    
 
     <br><br><br><br><br>
     <!-- Rodapé -->
@@ -1140,8 +1149,35 @@
   }
 </script>
 
+<!-- SCRIPT DE RECOMENDAÇÃO -->
+<script>
+  function getRecommendation() {
+    const cuisine = document.getElementById('cuisine').value;
+    const diet = document.getElementById('diet').value;
+    const budget = document.getElementById('budget').value;
 
+    // Lista de restaurantes
+    const restaurants = [
+        { name: "Geleia", type: "lanches", diet: "nenhuma", budget: "medio" },
+        { name: "Ricardo Sushi", type: "japonesa", diet: "nenhuma", budget: "alto" },
+        { name: "Suco & Tal", type: "lanches", diet: "vegano", budget: "baixo" },
+        // Adicione mais...
+    ];
 
+    // Filtrar restaurantes
+    const filtered = restaurants.filter(rest => 
+        (rest.type === cuisine || cuisine === "") &&
+        (rest.diet === diet || diet === "nenhuma") &&
+        (rest.budget === budget || budget === "")
+    );
 
+    // Exibir resultado
+    const resultDiv = document.getElementById('recommendation-result');
+    resultDiv.innerHTML = filtered.length ? 
+        `<h3>Recomendamos:</h3><ul>${filtered.map(r => `<li>${r.name}</li>`).join('')}</ul>` : 
+        `<p>Não encontramos uma opção exata, mas você pode gostar de Geleia ou Suco & Tal.</p>`;
+}
+
+</script>
 
 </html>
