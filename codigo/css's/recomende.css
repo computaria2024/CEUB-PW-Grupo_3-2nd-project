@@ -1,0 +1,24 @@
+.hidden {
+    display: none;
+  }
+  .recommendation-section {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+  }
+  #recommendation-form label {
+    display: block;
+    margin-top: 10px;
+  }
+  #recommendation-form select,
+  #recommendation-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  #recommendation-results {
+    margin-top: 20px;
+  }
+  
