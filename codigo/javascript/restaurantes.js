@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         name: "Brasil Cacau",
         cuisine: ["doces"],
-        priceRange: "medio",
+        priceRange: ["medio", "baixo"],
         hungerLevel: "baixo",
         logo: "../media/logoBrasilCacau.png",
         image: "../media/brasilcacau.png",
@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         name: "Tabom",
         cuisine: ["refeicoes", "bebidas"],
-        priceRange: "baixo",
-        hungerLevel: "medio",
+        priceRange: ["baixo", "medio"],
+        hungerLevel: ["medio", "baixo"],
         logo: "../media/logoTabom.png",
         image: "../media/tabom.png",
         description: "Refeições caseiras saborosas com um toque especial.",
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         name: "Dr. Pizza",
         cuisine: ["lanches", "bebidas", "doces"],
         priceRange: "medio",
-        hungerLevel: "alto",
+        hungerLevel: ["alto", "baixo"],
         logo: "../media/logoDrPizza.png",
         image: "../media/drpizza.png",
         description: "Pizzas artesanais, churros feitos na hora e bebidas Bubble.",
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         name: "Suco & Tal",
         cuisine: ["bebidas", "lanches"],
         priceRange: "baixo",
-        hungerLevel: "baixo",
+        hungerLevel: ["baixo","medio"],
         logo: "../media/LogoSuco&Tal.png",
         image: "../media/sucoetal.png",
         description: "Sucos naturais e lanches saudáveis para todas as ocasiões.",
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         name: "Aprovados",
         cuisine: ["lanches", "bebidas"],
         priceRange: "baixo",
-        hungerLevel: ["medio","baixo"],
+        hungerLevel: ["medio", "baixo"],
         logo: "../media/logo-aprovados.png",
         image: "../media/aprovados.png",
         description: "Lanches rápidos e saborosos com um atendimento acolhedor.",
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         name: "Apetit's",
         cuisine: ["lanches", "refeicoes"],
-        priceRange: "baixo",
+        priceRange: ["baixo", "medio"],
         hungerLevel: ["alto", "baixo"],
         logo: "../media/logoApetits.png",
         image: "../media/apetits.png",
@@ -143,12 +143,17 @@ document.addEventListener("DOMContentLoaded", () => {
         restaurant.cuisine.includes(cuisine)
       );
   
-      // Refinar com base nos outros critérios
+      // Refinar com base no priceRange (levando em consideração se priceRange é um array)
       if (filteredRestaurants.length > 0) {
-        filteredRestaurants = filteredRestaurants.filter(
-          (restaurant) =>
-            restaurant.priceRange === priceRange &&
-            restaurant.hungerLevel === hungerLevel
+        filteredRestaurants = filteredRestaurants.filter((restaurant) =>
+          restaurant.priceRange.includes(priceRange)
+        );
+      }
+  
+      // Refinar com base no hungerLevel (levando em consideração se hungerLevel é um array)
+      if (filteredRestaurants.length > 0) {
+        filteredRestaurants = filteredRestaurants.filter((restaurant) =>
+          restaurant.hungerLevel.includes(hungerLevel)
         );
       }
   
