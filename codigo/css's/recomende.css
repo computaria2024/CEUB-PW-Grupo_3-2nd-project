@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 .recommendation-section {
   display: flex;
   flex-direction: column;
@@ -75,31 +79,3 @@
   padding: 0;
 }
 
-.cards-container .card {
-  margin: 20px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.2s;
-}
-
-.cards-container .card:hover {
-  transform: translateY(-5px);
-}
-
-.cards-container .card img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 15px;
-}
-
-.cards-container .card p {
-  margin: 10px 0;
-  color: #666;
-}
-
-.hidden {
-  display: none;
-}
