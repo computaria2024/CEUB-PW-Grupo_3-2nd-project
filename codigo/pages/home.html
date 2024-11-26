@@ -1022,32 +1022,35 @@
       </div>
     </section>
     
-    <!-- RECOMENDAÇÃO: -->
+    <!-- RECOMENDAÇÃO -->
     <section id="me-recomende" class="recommendation-section" data-aos="fade-up">
       <h2>Me Recomende</h2>
       <form id="recommendation-form">
         <label for="cuisine">Qual tipo de culinária você prefere?</label>
         <select id="cuisine" name="cuisine">
-          <option value="japonesa">Japonesa</option>
-          <option value="francesa">Francesa</option>
-          <option value="artesanal">Hambúrguer Artesanal</option>
+          <option value="lanches">Lanches</option>
           <option value="doces">Doces</option>
-          <option value="saudavel">Saudável</option>
+          <option value="refeicoes">Refeições</option>
+          <option value="bebidas">Bebidas</option>
         </select>
-    
+
         <label for="price-range">Qual a faixa de preço?</label>
         <select id="price-range" name="price-range">
           <option value="baixo">Baixo</option>
           <option value="medio">Médio</option>
           <option value="alto">Alto</option>
         </select>
-    
-        <label for="special-requirements">Requisitos especiais:</label>
-        <input type="text" id="special-requirements" name="special-requirements" placeholder="e.g., vegano, sem lactose">
-    
-        <button type="button" id="get-recommendation">Recomendar</button>
+
+        <label for="hunger-level">Qual o tamanho da sua fome?</label>
+        <select id="hunger-level" name="hunger-level">
+          <option value="baixo">Pouca</option>
+          <option value="medio">Média</option>
+          <option value="alto">Faminto</option>
+        </select>
+
+        <button class="info-button" type="button" id="get-recommendation">Recomendar</button>
       </form>
-    
+
       <div id="recommendation-results" class="hidden">
         <h3>Sugestões para você:</h3>
         <ul id="results-list"></ul>
@@ -1066,6 +1069,7 @@
     </footer>
 </body>
 
+<script src="../javascript/restaurantes.js"></script>
 
 
 <!--EFEITOS JAVASCRIPT-->    
@@ -1139,9 +1143,5 @@
     }, delay);
   }
 </script>
-
-
-
-
 
 </html>
