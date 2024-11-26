@@ -158,11 +158,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const cardsContainer = document.createElement("div");
         cardsContainer.className = "cards-container";
 
-        filteredRestaurants.forEach((restaurant, index) => {
+        filteredRestaurants.forEach((restaurant) => {
             const card = document.createElement("div");
             card.className = "card";
 
-            const sanitizedId = restaurant.name.toLowerCase().replace(/\s+/g, "-");
+            const sanitizedId = restaurant.name
+                .toLowerCase()
+                .replace(/\s+/g, "-")
+                .replace(/&/g, "e")
+                .replace(/[^\w-]/g, "");
 
             card.innerHTML = `
                 <img src="${restaurant.logo}" loading="lazy" alt="Logo ${restaurant.name}" class="card-logo">
