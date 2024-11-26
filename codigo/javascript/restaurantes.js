@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         description: "Sucos naturais e lanches saudáveis para todas as ocasiões.",
       },
       {
-        name: "Creperia Pica-Pau - Unidade 1",
+        name: "Creperia PicaPau",
         cuisine: ["lanches"],
         priceRange: "medio",
         hungerLevel: "medio",
