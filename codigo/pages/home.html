@@ -277,7 +277,7 @@
               </div>
               <div class="overlay-rest">
                   <p>Descubra deliciosos crepes, doces e salgados, feitos na hora .</p>
-                  <button class="info-button" onclick="showInfo('creperia-picapau')">Mais informações</button>
+                  <button class="info-button" onclick="showInfo('creperiapicapau')">Mais informações</button>
               </div>
           </div>
 
@@ -481,7 +481,7 @@
     </section>
 
     <!-- Seção de informações ocultas para a Creperia Pica-Pau -->
-    <section id="creperia-picapau" class="hidden-info">
+    <section id="creperiapicapau" class="hidden-info">
       <h2>Creperia Pica-Pau - Unidade 1</h2>
       <p>Aqui estão os detalhes sobre a Creperia Pica-Pau. Deliciosos crepes disponíveis!</p>
 
@@ -510,7 +510,7 @@
         </label>
       </div>
       <!-- Fechar corretamente -->
-      <button class="info-button" onclick="hideInfo('creperia-picapau')">Fechar</button>
+      <button class="info-button" onclick="hideInfo('creperiapicapau')">Fechar</button>
     </section>
 
     <!-- Seção de informações ocultas para a Lanchonete Aprovados -->
@@ -1097,24 +1097,25 @@
 </script>
 
 <script>
-  function showInfo(sectionId) {
-    // Exibe a seção oculta correspondente
-    const section = document.getElementById(sectionId);
+  function showInfo(id) {
+    const section = document.getElementById(id);
     if (section) {
-        section.style.display = "block";
+        section.style.display = "block"; // Ou use `classList.add` para uma classe CSS
+        section.scrollIntoView({ behavior: "smooth" });
     } else {
-        console.error(`Seção com ID '${sectionId}' não encontrada.`);
+        console.error(`Elemento com ID '${id}' não encontrado.`);
     }
-  } 
-  function hideInfo(sectionId) {
-      // Esconde a seção oculta correspondente
-      const section = document.getElementById(sectionId);
+  }
+
+  function hideInfo(id) {
+      const section = document.getElementById(id);
       if (section) {
-          section.style.display = "none";
+          section.style.display = "none"; // Ou use `classList.remove` para a classe
       } else {
-          console.error(`Seção com ID '${sectionId}' não encontrada.`);
+          console.error(`Elemento com ID '${id}' não encontrado.`);
       }
   }
+
 
 </script>
 

@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         description: "Sucos naturais e lanches saudáveis para todas as ocasiões.",
       },
       {
-        name: "Creperia Pica-Pau",
+        name: "Creperia Pica-Pau - Unidade 1",
         cuisine: ["lanches"],
         priceRange: "medio",
         hungerLevel: "medio",
@@ -131,71 +131,57 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("recommendation-form");
     const resultsContainer = document.getElementById("results-list");
     const recommendationResults = document.getElementById("recommendation-results");
-  
+
     document.getElementById("get-recommendation").addEventListener("click", () => {
-      // Capturar valores do formulário
-      const cuisine = form.cuisine.value;
-      const priceRange = form["price-range"].value;
-      const hungerLevel = form["hunger-level"].value;
-  
-      // Filtrar restaurantes pela prioridade de cuisine
-      let filteredRestaurants = restaurants.filter((restaurant) =>
-        restaurant.cuisine.includes(cuisine)
-      );
-  
-      // Refinar com base no priceRange (levando em consideração se priceRange é um array)
-      if (filteredRestaurants.length > 0) {
-        filteredRestaurants = filteredRestaurants.filter((restaurant) =>
-          restaurant.priceRange.includes(priceRange)
+        const cuisine = form.cuisine.value;
+        const priceRange = form["price-range"].value;
+        const hungerLevel = form["hunger-level"].value;
+
+        let filteredRestaurants = restaurants.filter(restaurant =>
+            restaurant.cuisine.includes(cuisine) &&
+            (Array.isArray(restaurant.priceRange)
+                ? restaurant.priceRange.includes(priceRange)
+                : restaurant.priceRange === priceRange) &&
+            (Array.isArray(restaurant.hungerLevel)
+                ? restaurant.hungerLevel.includes(hungerLevel)
+                : restaurant.hungerLevel === hungerLevel)
         );
-      }
-  
-      // Refinar com base no hungerLevel (levando em consideração se hungerLevel é um array)
-      if (filteredRestaurants.length > 0) {
-        filteredRestaurants = filteredRestaurants.filter((restaurant) =>
-          restaurant.hungerLevel.includes(hungerLevel)
-        );
-      }
-  
-      // Se nenhum restaurante corresponder, recomendar algo próximo
-      if (filteredRestaurants.length === 0) {
-        filteredRestaurants = restaurants.filter((restaurant) =>
-          restaurant.cuisine.includes(cuisine)
-        );
-      }
-  
-      // Limpar resultados anteriores
-      resultsContainer.innerHTML = "";
-  
-      // Criar a div cards-container para organizar os cards
-      const cardsContainer = document.createElement("div");
-      cardsContainer.className = "cards-container";
-  
-      // Renderizar os resultados como cards estilizados
-      filteredRestaurants.forEach((restaurant) => {
-        const card = document.createElement("div");
-        card.className = "card";
-  
-        card.innerHTML = `
-          <img src="${restaurant.logo}" loading="lazy" alt="Logo ${restaurant.name}" class="card-logo">
-          <img src="${restaurant.image}" loading="lazy" alt="${restaurant.name}" class="card-image">
-          <div class="card-info">
-            <p class="culinaria">${restaurant.description}</p>
-            <p class="nome"><strong>${restaurant.name}</strong></p>
-          </div>
-          <div class="overlay-rest">
-            <p>${restaurant.description}</p>
-            <button class="info-button" onclick="showInfo('${restaurant.name.toLowerCase()}')">Mais informações</button>
-          </div>
-        `;
-        cardsContainer.appendChild(card);
-      });
-  
-      // Adicionar os cards à div de resultados
-      resultsContainer.appendChild(cardsContainer);
-  
-      // Tornar o contêiner de resultados visível
-      recommendationResults.classList.remove("hidden");
+
+        if (filteredRestaurants.length === 0) {
+            filteredRestaurants = restaurants.filter(restaurant =>
+                restaurant.cuisine.includes(cuisine)
+            );
+        }
+
+        resultsContainer.innerHTML = "";
+
+        const cardsContainer = document.createElement("div");
+        cardsContainer.className = "cards-container";
+
+        filteredRestaurants.forEach((restaurant, index) => {
+            const card = document.createElement("div");
+            card.className = "card";
+
+            const sanitizedId = restaurant.name.toLowerCase().replace(/\s+/g, "-");
+
+            card.innerHTML = `
+                <img src="${restaurant.logo}" loading="lazy" alt="Logo ${restaurant.name}" class="card-logo">
+                <img src="${restaurant.image}" loading="lazy" alt="${restaurant.name}" class="card-image">
+                <div class="card-info">
+                    <p class="culinaria">${restaurant.description}</p>
+                    <p class="nome"><strong>${restaurant.name}</strong></p>
+                </div>
+                <div class="overlay-rest">
+                    <p>${restaurant.description}</p>
+                    <button class="info-button" onclick="showInfo('${sanitizedId}')">Mais informações</button>
+                </div>
+            `;
+
+            cardsContainer.appendChild(card);
+        });
+
+        resultsContainer.appendChild(cardsContainer);
+        recommendationResults.classList.remove("hidden");
     });
   });
   
