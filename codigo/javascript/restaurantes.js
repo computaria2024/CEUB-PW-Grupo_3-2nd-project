@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         name: "Suco & Tal",
         cuisine: ["bebidas", "lanches"],
         priceRange: "baixo",
-        hungerLevel: ["baixo","medio"],
+        hungerLevel: ["baixo", "medio"],
         logo: "../media/LogoSuco&Tal.png",
         image: "../media/sucoetal.png",
         description: "Sucos naturais e lanches saudáveis para todas as ocasiões.",
@@ -167,6 +167,10 @@ document.addEventListener("DOMContentLoaded", () => {
       // Limpar resultados anteriores
       resultsContainer.innerHTML = "";
   
+      // Criar a div cards-container para organizar os cards
+      const cardsContainer = document.createElement("div");
+      cardsContainer.className = "cards-container";
+  
       // Renderizar os resultados como cards estilizados
       filteredRestaurants.forEach((restaurant) => {
         const card = document.createElement("div");
@@ -184,8 +188,11 @@ document.addEventListener("DOMContentLoaded", () => {
             <button class="info-button" onclick="showInfo('${restaurant.name.toLowerCase()}')">Mais informações</button>
           </div>
         `;
-        resultsContainer.appendChild(card);
+        cardsContainer.appendChild(card);
       });
+  
+      // Adicionar os cards à div de resultados
+      resultsContainer.appendChild(cardsContainer);
   
       // Tornar o contêiner de resultados visível
       recommendationResults.classList.remove("hidden");
