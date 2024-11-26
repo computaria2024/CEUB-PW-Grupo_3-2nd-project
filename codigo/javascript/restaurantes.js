@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const restaurants = [
       {
         name: "Geleia",
-        cuisine: "lanches",
+        cuisine: ["lanches"],
         priceRange: "medio",
         hungerLevel: "alto",
         logo: "../media/logogeleia.png",
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       {
         name: "Brasil Cacau",
-        cuisine: "doces",
+        cuisine: ["doces"],
         priceRange: "medio",
         hungerLevel: "baixo",
         logo: "../media/logoBrasilCacau.png",
@@ -20,14 +20,112 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       {
         name: "Tabom",
-        cuisine: "refeicoes",
+        cuisine: ["refeicoes", "bebidas"],
         priceRange: "baixo",
         hungerLevel: "medio",
         logo: "../media/logoTabom.png",
         image: "../media/tabom.png",
         description: "Refeições caseiras saborosas com um toque especial.",
       },
-      // Adicione mais restaurantes aqui
+      {
+        name: "Dr. Pizza",
+        cuisine: ["lanches", "bebidas", "doces"],
+        priceRange: "medio",
+        hungerLevel: "alto",
+        logo: "../media/logoDrPizza.png",
+        image: "../media/drpizza.png",
+        description: "Pizzas artesanais, churros feitos na hora e bebidas Bubble.",
+      },
+      {
+        name: "Happy Harry",
+        cuisine: ["doces"],
+        priceRange: "alto",
+        hungerLevel: "baixo",
+        logo: "../media/logoHappyHarry.png",
+        image: "../media/happyharry.png",
+        description: "Sorvetes artesanais com sabores incríveis e únicos.",
+      },
+      {
+        name: "Suco & Tal",
+        cuisine: ["bebidas", "lanches"],
+        priceRange: "baixo",
+        hungerLevel: "baixo",
+        logo: "../media/LogoSuco&Tal.png",
+        image: "../media/sucoetal.png",
+        description: "Sucos naturais e lanches saudáveis para todas as ocasiões.",
+      },
+      {
+        name: "Creperia Pica-Pau",
+        cuisine: ["lanches"],
+        priceRange: "medio",
+        hungerLevel: "medio",
+        logo: "../media/logoCreperiapicaPau.png",
+        image: "../media/creperiaPicaPau1.png",
+        description: "Deliciosos crepes doces e salgados, feitos na hora.",
+      },
+      {
+        name: "Aprovados",
+        cuisine: ["lanches", "bebidas"],
+        priceRange: "baixo",
+        hungerLevel: ["medio","baixo"],
+        logo: "../media/logo-aprovados.png",
+        image: "../media/aprovados.png",
+        description: "Lanches rápidos e saborosos com um atendimento acolhedor.",
+      },
+      {
+        name: "Kmart",
+        cuisine: ["lanches"],
+        priceRange: "medio",
+        hungerLevel: ["medio", "baixo"],
+        logo: "../media/logokmart.png",
+        image: "../media/kmart.png",
+        description: "Lanches e cafés deliciosos, preparados com qualidade.",
+      },
+      {
+        name: "Fast Grill",
+        cuisine: ["refeicoes"],
+        priceRange: "medio",
+        hungerLevel: "medio",
+        logo: "../media/logoFastgrill.png",
+        image: "../media/fastgrill.png",
+        description: "Refeições completas e saborosas para almoço e jantar.",
+      },
+      {
+        name: "Apetit's",
+        cuisine: ["lanches", "refeicoes"],
+        priceRange: "baixo",
+        hungerLevel: ["alto", "baixo"],
+        logo: "../media/logoApetits.png",
+        image: "../media/apetits.png",
+        description: "Hambúrgueres de frango e refeições deliciosas.",
+      },
+      {
+        name: "Ricardo Sushi",
+        cuisine: ["lanches"],
+        priceRange: "alto",
+        hungerLevel: ["medio", "alto"],
+        logo: "../media/logoRicardoSushi.png",
+        image: "../media/ricardoSushi.png",
+        description: "Autêntica culinária japonesa, com sushis e combinados incríveis.",
+      },
+      {
+        name: "John's Cookies",
+        cuisine: ["doces"],
+        priceRange: "medio",
+        hungerLevel: "baixo",
+        logo: "../media/logoJohnsCookies.png",
+        image: "../media/johnsCookies.png",
+        description: "Cookies e sobremesas artesanais de alta qualidade.",
+      },
+      {
+        name: "The Coffee",
+        cuisine: ["bebidas"],
+        priceRange: "alto",
+        hungerLevel: "baixo",
+        logo: "../media/logothecoffee.png",
+        image: "../media/theCoffee.jpg",
+        description: "Cafés especiais e lanches artesanais.",
+      },
     ];
   
     const form = document.getElementById("recommendation-form");
@@ -40,21 +138,24 @@ document.addEventListener("DOMContentLoaded", () => {
       const priceRange = form["price-range"].value;
       const hungerLevel = form["hunger-level"].value;
   
-      // Filtrar restaurantes com base nos critérios
-      let filteredRestaurants = restaurants.filter(
-        (restaurant) =>
-          restaurant.cuisine === cuisine &&
-          restaurant.priceRange === priceRange &&
-          restaurant.hungerLevel === hungerLevel
+      // Filtrar restaurantes pela prioridade de cuisine
+      let filteredRestaurants = restaurants.filter((restaurant) =>
+        restaurant.cuisine.includes(cuisine)
       );
   
-      // Se não houver correspondências exatas, buscar correspondências mais próximas
-      if (filteredRestaurants.length === 0) {
-        filteredRestaurants = restaurants.filter(
+      // Refinar com base nos outros critérios
+      if (filteredRestaurants.length > 0) {
+        filteredRestaurants = filteredRestaurants.filter(
           (restaurant) =>
-            restaurant.cuisine === cuisine ||
-            restaurant.priceRange === priceRange ||
+            restaurant.priceRange === priceRange &&
             restaurant.hungerLevel === hungerLevel
+        );
+      }
+  
+      // Se nenhum restaurante corresponder, recomendar algo próximo
+      if (filteredRestaurants.length === 0) {
+        filteredRestaurants = restaurants.filter((restaurant) =>
+          restaurant.cuisine.includes(cuisine)
         );
       }
   
