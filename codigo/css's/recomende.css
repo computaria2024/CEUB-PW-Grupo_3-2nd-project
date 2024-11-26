@@ -1,33 +1,105 @@
+.recommendation-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 900px;
+  width: 90%; /* Responsivo */
+}
+
+.recommendation-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#recommendation-form {
+  width: 100%; /* Ocupa toda a largura do container */
+  margin-top: 20px;
+}
+
+#recommendation-form label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+#recommendation-form select,
+#recommendation-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#recommendation-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4112ec;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#recommendation-form button:hover {
+  background-color: #8363f8;
+}
+
+#recommendation-results {
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+#recommendation-results h3 {
+  margin-bottom: 80px; /* Aumenta a distância do título para os cards */
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+#results-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cards-container .card {
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.cards-container .card:hover {
+  transform: translateY(-5px);
+}
+
+.cards-container .card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.cards-container .card p {
+  margin: 10px 0;
+  color: #666;
+}
 
 .hidden {
-    display: none;
-  }
-
-  .hidden-info {
-    display: none;
-  }
-  
-  .hidden-info.active {
-    display: block;
-  }
-  
-  .recommendation-section {
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 10px;
-  }
-  #recommendation-form label {
-    display: block;
-    margin-top: 10px;
-  }
-  #recommendation-form select,
-  #recommendation-form input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  #recommendation-results {
-    margin-top: 20px;
-  }
+  display: none;
+}
