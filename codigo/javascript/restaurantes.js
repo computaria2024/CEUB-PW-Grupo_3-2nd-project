@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
         description: "Deliciosos crepes doces e salgados, feitos na hora.",
       },
       {
-        name: "Aprovados",
+        name: "Lanchonete Aprovados",
         cuisine: ["lanches", "bebidas"],
         priceRange: "baixo",
         hungerLevel: ["medio", "baixo"],

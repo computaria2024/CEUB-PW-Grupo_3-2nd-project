@@ -2,6 +2,15 @@
 .hidden {
     display: none;
   }
+
+  .hidden-info {
+    display: none;
+  }
+  
+  .hidden-info.active {
+    display: block;
+  }
+  
   .recommendation-section {
     padding: 20px;
     background: #f9f9f9;
