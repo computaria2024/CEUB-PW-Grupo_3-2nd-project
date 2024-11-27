@@ -1,0 +1,20 @@
+#user-info a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  #logout-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  #logout-button:hover {
+    color: #f39c12;
+  }
+  
