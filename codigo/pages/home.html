@@ -25,13 +25,14 @@
     <!-- Cabeçalho -->
 <header data-aos="fade-up">
   <nav class="main-nav">
-      <img src="../media/ceubAO-logo.jpg" alt="Logo Ceubão" class="logo">
-      <ul class="nav-links">
+    <img src="../media/ceubAO-logo.jpg" alt="Logo Ceubão" class="logo">
+    <ul class="nav-links">
         <li><a href="#title-gastronomia">Gastronomia</a></li>
         <li><a href="#avaliacao">Avaliação</a></li>
         <li><a href="#me-recomende">Me recomende</a></li>
         <li><a href="loginHome.html">Login/Cadastro</a></li>
-      </ul>
+        <li><button id="logout-button" style="display:none;">Logout</button></li>
+    </ul>
   </nav>
 </header>
 
@@ -1145,5 +1146,25 @@
     }, delay);
   }
 </script>
+
+<!-- TESTE LOGIN -->
+<script>
+  // Função de logout
+  function logout() {
+    localStorage.removeItem('isAuthenticated');
+    localStorage.removeItem('userEmail');
+    window.location.href = 'signin.html';
+  }
+
+  // Verifica se o usuário está autenticado
+  if (localStorage.getItem('isAuthenticated')) {
+    document.getElementById('login-link').style.display = 'none'; // Oculta o link de login
+    document.getElementById('logout-button').style.display = 'inline-block'; // Exibe o botão de logout
+    const userEmail = localStorage.getItem('userEmail');
+    document.querySelector('.top-bar').innerHTML += `<br>Bem-vindo, ${userEmail}!`; // Saudação
+  }
+</script>
+
+
 
 </html>

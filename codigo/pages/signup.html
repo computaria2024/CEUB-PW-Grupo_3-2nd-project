@@ -10,7 +10,12 @@
     <title>Cadastro de Usuário</title>
 </head>
 <body>
-    <div class="form-container">
+  <!-- Changes sign up Logic -->
+    <div class="form-container" onsubmit="event.preventDefault(); signup(
+      document.querySelector('input[type=text]').value, 
+      document.querySelector('input[type=email]').value, 
+      document.querySelector('input[type=password]').value
+  );">
         <p class="title">Criar Conta</p>
         <p class="sub-title">Coloque seus dados e recebe muito mais do CeubÃo</p>
         <form class="form">
@@ -46,4 +51,5 @@
         </div>
       </div>
 </body>
+
 </html>

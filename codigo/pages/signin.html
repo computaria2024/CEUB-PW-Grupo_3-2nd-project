@@ -380,7 +380,13 @@
           <!-- FORMS LOGIN -->
           <div class="form-container">
             <p class="title">Bem vindo!</p>
-            <form class="form">
+
+            <!-- CHANGES LOGIN LOGIC -->
+
+            <form class="form" onsubmit="event.preventDefault(); login(
+              document.querySelector('input[type=email]').value, 
+              document.querySelector('input[type=password]').value
+          );">
               <input type="email" class="input" placeholder="Email">
               <input type="password" class="input" placeholder="Senha">
               <p class="page-link">
@@ -416,4 +422,10 @@
           </div>
     </div>
 </body>
+
+<!-- TESTANDO LOGIN COM UM UNICO USUÁRIO -->
+<script src="../javascript/auth.js"></script>
+
+
+
 </html>
