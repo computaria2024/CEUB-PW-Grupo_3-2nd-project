@@ -1,5 +1,5 @@
 const validCredentials = {
-    email: "usuario@ceubao.com",
+    email: "valdemir@ceubao.com",
     password: "senha123"
   };
   
